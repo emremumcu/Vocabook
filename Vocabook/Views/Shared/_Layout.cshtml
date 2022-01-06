@@ -1,24 +1,28 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Vocabook</title>
     <link rel="stylesheet" href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/css/site.css")" asp-append-version="true" />
+    <link rel="stylesheet" href="@Url.Content("~/css/site.css")" />
 </head>
+
 <body>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+    <div class="container-lg">        
+        @RenderBody()
     </div>
 
     <script src="@Url.Content("~/lib/jquery/dist/jquery.min.js")"></script>
-    <script src="@Url.Content("~/lib/bootstrap/dist/js/bootstrap.bundle.min.js")"></script>
-    <script src="@Url.Content("~/js/site.js")" asp-append-version="true"></script>
+    <script src="@Url.Content("~/lib/bootstrap/dist/js/bootstrap.bundle.min.js")"></script>    
+    <partial name="_ValidationScriptsPartial" />
+    <script src="@Url.Content("~/js/site.js")"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 
 </body>
+
 </html>
